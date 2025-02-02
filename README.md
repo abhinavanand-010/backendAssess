@@ -89,29 +89,30 @@ A Django-based multilingual FAQ system with REST API support, caching using Redi
    python manage.py runserver
    ```
 
-**_ Usage _**
+### Usage
 ** Admin Panel **
 
 1. Access the admin panel at http://127.0.0.1:8000/admin.
 2. Log in with your superuser credentials.
 3. Add FAQs under the "FAQs" section.
 
-**_ API Endpoints _**
+### API Endpoints
 
 1.  **Default Language (English) :**
 
-````bash
+```bash
 curl http://127.0.0.1:8000/api/faqs/
-
+```
 2.  **Hindi**
  ```bash
  curl http://127.0.0.1:8000/api/faqs/?lang=hi
-
+ ```
 3.  ** Bengali**
  ```bash
  curl http://127.0.0.1:8000/api/faqs/?lang=bn
+ ```
 
-** Response Example **
+### Response Example
 ```json
 [
   {
@@ -125,11 +126,11 @@ curl http://127.0.0.1:8000/api/faqs/
       "answer": "पायथन एक प्रोग्रामिंग भाषा है।"
   }
 ]
-
-***Caching***
+```
+### Caching
 Redis is used to cache translations for faster API responses. Cached data expires after 1 hour (timeout=3600).
 
-*** Deployment***
+### Deployment
 Using Docker Compose
 
 **Access the app at ** : <http://localhost:8000>
